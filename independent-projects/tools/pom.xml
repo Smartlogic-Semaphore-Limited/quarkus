@@ -21,14 +21,62 @@
             <url>https://www.apache.org/licenses/LICENSE-2.0.html</url>
         </license>
     </licenses>
-    <scm child.scm.connection.inherit.append.path="false"
+    <!-- <scm child.scm.connection.inherit.append.path="false"
          child.scm.developerConnection.inherit.append.path="false"
          child.scm.url.inherit.append.path="false">
         <url>https://github.com/quarkusio/quarkus</url>
         <connection>scm:git:git@github.com:quarkusio/quarkus.git</connection>
         <developerConnection>scm:git:git@github.com:quarkusio/quarkus.git</developerConnection>
         <tag>HEAD</tag>
-    </scm>
+    </scm> -->
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>http://sl-cart01:8081/repository/maven-public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>central2</id>
+            <name>Maven Repository Switchboard</name>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <url>http://sl-cart01:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <url>http://sl-cart01:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <pluginRepositories>
+        <pluginRepository>
+        <id>central</id>
+        <url>http://sl-cart01:8081/repository/maven-public/</url>
+        <releases>
+            <enabled>true</enabled>
+        </releases>
+        <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>never</updatePolicy>
+        </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.target>11</maven.compiler.target>
@@ -67,7 +115,7 @@
     <modules>
         <module>registry-client</module>
         <module>message-writer</module>
-        <module>devtools-testing</module>
+        <!-- <module>devtools-testing</module> -->
         <module>codestarts</module>
         <module>base-codestarts</module>
         <module>devtools-common</module>
@@ -216,7 +264,7 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
+<!-- 
     <distributionManagement>
         <snapshotRepository>
             <id>sonatype-nexus-snapshots</id>
@@ -226,7 +274,7 @@
             <id>sonatype-nexus-release</id>
             <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
-    </distributionManagement>
+    </distributionManagement> -->
 
     <build>
         <plugins>

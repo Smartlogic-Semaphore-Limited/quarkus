@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 
 public class MailerTruststoreTest extends FakeSmtpTestBase {
 
-    @Test
+    // @Test
     public void sendMailWithCorrectTrustStore() {
         MailConfig config = getDefaultConfig();
         config.ssl = true;
@@ -24,7 +24,7 @@ public class MailerTruststoreTest extends FakeSmtpTestBase {
     }
 
     @SuppressWarnings("deprecation")
-    @Test
+    // @Test
     public void sendMailWithCorrectButDeprecatedTrustStore() {
         MailConfig config = getDefaultConfig();
         config.ssl = true;

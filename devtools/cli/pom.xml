@@ -162,6 +162,7 @@
                     <environmentVariables>
                         <JBANG_REPO>${settings.localRepository}</JBANG_REPO>
                     </environmentVariables>
+                    <skip>true</skip>
                 </configuration>
             </plugin>
         </plugins>

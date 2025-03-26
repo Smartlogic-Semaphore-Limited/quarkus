@@ -115,7 +115,7 @@
     <modules>
         <module>registry-client</module>
         <module>message-writer</module>
-        <!-- <module>devtools-testing</module> -->
+        <module>devtools-testing</module>
         <module>codestarts</module>
         <module>base-codestarts</module>
         <module>devtools-common</module>

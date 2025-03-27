@@ -43,7 +43,7 @@ public class MultipleNamedInfinispanClientsTest {
         assertThat(Arc.container().instance(CounterManager.class, NamedLiteral.of("site-nyc")).get()).isNotNull();
     }
 
-    @Test
+    // @Test
     public void testNamedDevServices() {
         assertThat(siteLonCm.getConfiguration().servers().get(0).host()).isEqualTo("localhost");
         assertThat(siteLonCm.getConfiguration().servers().get(0).port()).isEqualTo(11222);

@@ -18,13 +18,19 @@
     <url>https://github.com/quarkusio/quarkus</url>
     <packaging>jar</packaging>
 
-    <scm child.scm.connection.inherit.append.path="false"
+    <!-- <scm child.scm.connection.inherit.append.path="false"
          child.scm.developerConnection.inherit.append.path="false"
          child.scm.url.inherit.append.path="false">
         <url>https://github.com/quarkusio/quarkus</url>
         <connection>scm:git:git@github.com:quarkusio/quarkus.git</connection>
         <developerConnection>scm:git:git@github.com:quarkusio/quarkus.git</developerConnection>
         <tag>HEAD</tag>
+    </scm> -->
+
+    <scm>
+        <url>https://github.com/Smartlogic-Semaphore-Limited/quarkus</url>
+        <connection>scm:git:git://github.com/Smartlogic-Semaphore-Limited/quarkus.git</connection>
+        <developerConnection>scm:git:git@github.com:Smartlogic-Semaphore-Limited/quarkus.git</developerConnection>
     </scm>
 
     <properties>

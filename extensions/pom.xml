@@ -15,25 +15,25 @@
     <packaging>pom</packaging>
     <modules>
         <!-- Netty loom adaptor-->
-        <module>netty-loom-adaptor</module>
-        <!-- Plumbing -->
+        <!-- <module>netty-loom-adaptor</module>
+        Plumbing
         <module>arc</module>
         <module>scheduler</module>
         <module>quartz</module>
         <module>jaxp</module>
         <module>smallrye-stork</module>
 
-        <!-- Configuration -->
+        Configuration
         <module>config-yaml</module>
 
-        <!-- Formats -->
+        Formats
         <module>jackson</module>
         <module>jaxb</module>
         <module>jsonp</module>
         <module>jsonb</module>
         <module>hal</module>
 
-        <!-- HTTP -->
+        HTTP
         <module>vertx-http</module>
         <module>undertow</module>
         <module>websockets</module>
@@ -43,7 +43,7 @@
         <module>apache-httpclient</module>
         <module>jaxrs-spi</module>
 
-        <!-- Monitoring -->
+        Monitoring
         <module>smallrye-health</module>
         <module>smallrye-metrics</module>
         <module>smallrye-opentracing</module>
@@ -54,13 +54,13 @@
         <module>opentelemetry</module>
         <module>info</module>
 
-        <!-- REST services -->
+        REST services
         <module>resteasy-classic</module>
         <module>smallrye-openapi-common</module>
         <module>smallrye-openapi</module>
         <module>swagger-ui</module>
 
-        <!-- Reactive -->
+        Reactive
         <module>mutiny</module>
         <module>vertx</module>
         <module>netty</module>
@@ -82,7 +82,7 @@
         <module>redis-client</module>
         <module>redis-cache</module>
 
-        <!-- Data access and validation -->
+        Data access and validation
         <module>transaction-annotations</module>
         <module>narayana-jta</module>
         <module>narayana-stm</module>
@@ -108,7 +108,7 @@
         <module>schema-registry</module>
         <module>devservices</module>
 
-        <!-- Spring -->
+        Spring
         <module>spring-di</module>
         <module>spring-web</module>
         <module>spring-data-jpa</module>
@@ -119,7 +119,7 @@
         <module>spring-scheduled</module>
         <module>spring-data-rest</module>
 
-        <!-- Security -->
+        Security
         <module>security</module>
         <module>security-jpa</module>
         <module>security-jpa-reactive</module>
@@ -145,7 +145,7 @@
         <module>keycloak-admin-client</module>
         <module>keycloak-admin-client-reactive</module>
         <module>credentials</module>
-        <module>csrf-reactive</module>
+        <module>csrf-reactive</module> -->
 
         <!-- Infinispan -->
         <module>infinispan-client</module>

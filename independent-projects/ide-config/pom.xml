@@ -25,15 +25,21 @@
         </license>
     </licenses>
 
-    <scm child.scm.connection.inherit.append.path="false"
+    <!-- <scm child.scm.connection.inherit.append.path="false"
          child.scm.developerConnection.inherit.append.path="false"
          child.scm.url.inherit.append.path="false">
         <url>https://github.com/quarkusio/quarkus</url>
         <connection>scm:git:git@github.com:quarkusio/quarkus.git</connection>
         <developerConnection>scm:git:git@github.com:quarkusio/quarkus.git</developerConnection>
         <tag>HEAD</tag>
-    </scm>
+    </scm> -->
 
+    <scm>
+        <url>https://github.com/Smartlogic-Semaphore-Limited/quarkus</url>
+        <connection>scm:git:git://github.com/Smartlogic-Semaphore-Limited/quarkus.git</connection>
+        <developerConnection>scm:git:git@github.com:Smartlogic-Semaphore-Limited/quarkus.git</developerConnection>
+    </scm>
+    
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.target>11</maven.compiler.target>
@@ -42,7 +48,7 @@
         <version.enforcer.plugin>3.2.1</version.enforcer.plugin>
         <version.surefire.plugin>3.0.0</version.surefire.plugin>
     </properties>
-
+<!-- 
     <distributionManagement>
         <snapshotRepository>
             <id>sonatype-nexus-snapshots</id>
@@ -52,7 +58,54 @@
             <id>sonatype-nexus-releases</id>
             <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
+    </distributionManagement> -->
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>http://sl-cart01:8081/repository/maven-public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>central2</id>
+            <name>Maven Repository Switchboard</name>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <url>http://sl-cart01:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <url>http://sl-cart01:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
     </distributionManagement>
+
+    <pluginRepositories>
+        <pluginRepository>
+        <id>central</id>
+        <url>http://sl-cart01:8081/repository/maven-public/</url>
+        <releases>
+            <enabled>true</enabled>
+        </releases>
+        <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>never</updatePolicy>
+        </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 
     <build>
         <pluginManagement>

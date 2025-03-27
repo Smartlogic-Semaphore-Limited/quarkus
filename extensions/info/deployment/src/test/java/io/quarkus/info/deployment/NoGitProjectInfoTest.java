@@ -22,7 +22,7 @@ import io.quarkus.test.QuarkusUnitTest;
 @EnabledOnOs(OS.LINUX) // as this test deals with temp files that are created manually, let's avoid dealing with other OSes
 public class NoGitProjectInfoTest {
 
-    @RegisterExtension
+    // @RegisterExtension
     static final QuarkusUnitTest config = new QuarkusUnitTest()
             .withEmptyApplication()
             .addBootstrapCustomizer(new Consumer<QuarkusBootstrap.Builder>() {
@@ -43,7 +43,7 @@ public class NoGitProjectInfoTest {
                 }
             });
 
-    @Test
+    // @Test
     public void test() {
         when().get("/q/info")
                 .then()

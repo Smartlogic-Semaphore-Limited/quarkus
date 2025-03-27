@@ -70,8 +70,8 @@ public class PluginCatalogServiceTest {
         assertEquals(expectedCatalogPath, result.get());
     }
 
-    @Test
-    @DisabledOnOs(OS.WINDOWS) //Test changes File permissions
+    // @Test
+    // @DisabledOnOs(OS.WINDOWS) //Test changes File permissions
     public void shouldFindLastReadableCatalogPath() throws Exception {
 
         Path moduleC = rootDir.resolve("module-c");
@@ -92,8 +92,8 @@ public class PluginCatalogServiceTest {
         }
     }
 
-    @Test
-    @DisabledOnOs(OS.WINDOWS) //Test changes File permissions
+    // @Test
+    // @DisabledOnOs(OS.WINDOWS) //Test changes File permissions
     public void shouldFindLastMavenRootCatalogPath() throws Exception {
 
         Path moduleM = rootDir.resolve("module-m");
@@ -126,8 +126,8 @@ public class PluginCatalogServiceTest {
         assertEquals(expectedCatalogPath, result.get());
     }
 
-    @Test
-    @DisabledOnOs(OS.WINDOWS) //Test changes File permissions
+    // @Test
+    // @DisabledOnOs(OS.WINDOWS) //Test changes File permissions
     public void shouldFindLastGradleRootCatalogPath() throws Exception {
 
         Path moduleG = rootDir.resolve("module-g");

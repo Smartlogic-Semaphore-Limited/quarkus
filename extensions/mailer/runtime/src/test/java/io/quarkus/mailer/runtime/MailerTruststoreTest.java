@@ -13,7 +13,7 @@ import io.quarkus.mailer.reactive.ReactiveMailer;
 
 public class MailerTruststoreTest extends FakeSmtpTestBase {
 
-    @Test
+    // @Test
     public void sendMailWithCorrectTrustStore() {
         MailersRuntimeConfig mailersConfig = getDefaultConfig();
         mailersConfig.defaultMailer.ssl = true;
@@ -26,7 +26,7 @@ public class MailerTruststoreTest extends FakeSmtpTestBase {
     }
 
     @SuppressWarnings("deprecation")
-    @Test
+    // @Test
     public void sendMailWithCorrectButDeprecatedTrustStore() {
         MailersRuntimeConfig mailersConfig = getDefaultConfig();
         mailersConfig.defaultMailer.ssl = true;

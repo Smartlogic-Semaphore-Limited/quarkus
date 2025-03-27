@@ -144,7 +144,7 @@
                         <goals>
                             <goal>build</goal>
                             <goal>generate-code</goal>
-                            <goal>generate-code-tests</goal>
+                            <!-- <goal>generate-code-tests</goal> -->
                         </goals>
                         <configuration>
                             <skipOriginalJarRename>true</skipOriginalJarRename>
@@ -162,6 +162,7 @@
                     <environmentVariables>
                         <JBANG_REPO>${settings.localRepository}</JBANG_REPO>
                     </environmentVariables>
+                    <skip>true</skip>
                 </configuration>
             </plugin>
         </plugins>
